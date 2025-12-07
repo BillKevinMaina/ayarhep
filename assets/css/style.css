@@ -4549,7 +4549,7 @@ hr {
 /* line 1, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_wantTowork.scss */
 .wantToWork-area {
   background: #f8fcff;
-  padding-bottom: 150px;
+  padding-bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4801,6 +4801,14 @@ hr {
 /* line 108, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_team.scss */
 .team-social li:nth-child(3) a {
   transition-delay: 0.3s;
+}
+.section-bg {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed; /* Optional: real parallax effect */
+    min-height: 300px; /* You can adjust this height */
+    width: 100%;
 }
 
 /* line 14, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_count_down.scss */

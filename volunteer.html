@@ -1,14 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter </title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mentorship</title>
    <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.JPG">
-
-	<!-- CSS here -->
+  <!-- CSS here -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/slicknav.css">
@@ -23,162 +21,107 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-      color: #222;
-    }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff;
-    }
+    <style>
+  :root{
+    --bg:#060b12;
+    --panel:#0b1424;
+    --muted:#9aa9b9;
+    --text:#f6fbff;
+    --red:#e63946;     /* AYARHEP red */
+    --blue:#1d4ed8;    /* AYARHEP blue */
+    --white:#ffffff;
+    --shadow:0 16px 40px rgba(0,0,0,.35);
+  }
 
-    .subpage-hero {
-      position: relative;
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 16px;
-      margin: 24px;
-      background: linear-gradient(180deg, #0077ff, #0055aa);
-      color: #fff;
-      text-align: center;
-    }
+  body{
+    background:#ffffff;
+    -webkit-font-smoothing:antialiased;
+  }
 
-    /* Wave layers */
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 200%;
-      height: 100px;
-      background-repeat: repeat-x;
-      background-size: 50% 100px;
-      opacity: 0.5;
-      animation: wave 10s linear infinite;
-    }
+  .wrap{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+  }
 
-    .wave1 {
-      background-image: radial-gradient(circle at 50% 40%, #33aaff 40%, transparent 60%);
-      animation-duration: 12s;
-      bottom: 0;
-    }
+  .v-hero{
+    padding:32px;
+    border-radius:18px;
+    background:linear-gradient(135deg,rgba(230,57,70,0.12),rgba(29,78,216,0.12));
+    box-shadow:var(--shadow);
+    margin-bottom:24px;
+  }
+  .v-hero h1{
+    font-size:32px;
+    font-weight:900;
+    background:linear-gradient(90deg,var(--red),var(--blue));
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:8px;
+  }
+  .v-hero p{
+    color:#1f2933;
+    max-width:720px;
+  }
 
-    .wave2 {
-      background-image: radial-gradient(circle at 50% 40%, #0099ff 40%, transparent 60%);
-      animation-duration: 18s;
-      bottom: 20px;
-    }
+  .v-form{
+    padding:24px;
+    background:#020617;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--red);
+    color:var(--text);
+  }
+  .v-form h2{
+    font-size:24px;
+    margin-bottom:12px;
+    color:var(--red);
+  }
+  .v-form label{
+    display:block;
+    margin-top:12px;
+    font-weight:600;
+  }
+  .v-form input,
+  .v-form textarea,
+  .v-form select{
+    width:100%;
+    margin-top:6px;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:#020617;
+    color:var(--text);
+  }
+  .v-form input::placeholder,
+  .v-form textarea::placeholder{
+    color:#94a3b8;
+  }
+  .v-form button{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--red),var(--blue));
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .v-form button:hover{
+    filter:brightness(1.05);
+  }
 
-    .wave3 {
-      background-image: radial-gradient(circle at 50% 40%, #66ccff 40%, transparent 60%);
-      animation-duration: 25s;
-      bottom: 40px;
-    }
+  @media(max-width:768px){
+    .wrap{margin-top:20px}
+    .v-hero h1{font-size:26px}
+  }
+</style>
 
-    @keyframes wave {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Title styling (no background now) */
-    .hero-title {
-      position: relative;
-      z-index: 2;
-      font-size: 28px;
-      font-weight: 700;
-      margin: 0;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .newsletter-form, .past-newsletters {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .newsletter-form h2, .past-newsletters h2 {
-      margin-bottom: 15px;
-      color: #003366;
-    }
-
-    .newsletter-form input, .newsletter-form button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .newsletter-form button {
-      background: #cc0000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .newsletter-form button:hover {
-      background: #003366;
-    }
-
-    .past-newsletters ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .past-newsletters li {
-      margin: 12px 0;
-      padding: 12px;
-      border-left: 5px solid #003366;
-      background: #f1f1f1;
-      border-radius: 6px;
-    }
-
-    .past-newsletters a {
-      text-decoration: none;
-      color: #cc0000;
-      font-weight: bold;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  
 </head>
 <body>
-   <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.JPG" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+ 
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
@@ -296,38 +239,79 @@
         </div>
         <!-- Header End -->
     </header>
- <div class="subpage-hero">
-    <!-- Waves -->
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-
-    <!-- Text -->
-    <h1 class="hero-title">Newsletter</h1>
-  </div>
-
-  <section class="grid-container">
-    <!-- Newsletter Signup -->
-    <div class="newsletter-form">
-      <h2>Sign Up</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-
-    <!-- Past Editions -->
-    <div class="past-newsletters">
-      <h2>Past Editions</h2>
-      <ul>
-        <li><a href="#">📄 March 2025 Edition</a> – Youth plus</li>
-        <li><a href="#">📄 February 2025 Edition</a> – Youth in leadership</li>
-        <li><a href="#">📄 January 2025 Edition</a> – Year in review</li>
-      </ul>
-    </div>
+    
+  <main class="wrap">
+  <section class="v-hero">
+    <h1>Become an AYARHEP Volunteer</h1>
+    <p>
+      Join AYARHEP in Komarock to support adolescents and youth with HIV &amp; SRHR
+      information, outreach, mentorship, and empowerment.
+    </p>
   </section>
-<footer>
+
+  <section class="v-form">
+    <h2>Volunteer Details</h2>
+
+    <form id="volunteerForm" action="https://formspree.io/f/xeoyzbnj" method="POST">
+      <input type="hidden" name="_subject" value="New Volunteer Signup from AYARHEP Website">
+
+      <label for="vname">Full Name</label>
+      <input type="text" id="vname" name="name" required>
+
+      <label for="vemail">Email</label>
+      <input type="email" id="vemail" name="email" required>
+
+      <label for="vphone">Phone Number</label>
+      <input type="tel" id="vphone" name="phone" required>
+
+      <label for="vage">Age Group</label>
+      <select id="vage" name="age_group" required>
+        <option value="">-- Select Age Group --</option>
+        <option value="Under 18">Under 18</option>
+        <option value="18-24">18–24</option>
+        <option value="25-30">25–30</option>
+      </select>
+
+      <label for="vlocation">Location</label>
+      <input type="text" id="vlocation" name="location" value="Komarock" required>
+
+      <label for="varea">Preferred Volunteer Area</label>
+      <select id="varea" name="volunteer_area" required>
+        <option value="">-- Select an Area --</option>
+        <option value="HIV/SRHR Outreach">HIV/SRHR Outreach</option>
+        <option value="Community Education">Community Education</option>
+        <option value="Youth Mentorship">Youth Mentorship</option>
+        <option value="Events & Mobilization">Events &amp; Mobilization</option>
+        <option value="Content/Social Media">Content Creation / Social Media</option>
+        <option value="Research & Documentation">Research &amp; Documentation</option>
+        <option value="Admin & Logistics">Admin &amp; Logistics</option>
+        <option value="Advocacy & Leadership">Advocacy &amp; Leadership</option>
+      </select>
+
+      <label for="vavailability">Availability</label>
+      <select id="vavailability" name="availability" required>
+        <option value="">-- Select Availability --</option>
+        <option value="Weekdays">Weekdays</option>
+        <option value="Weekends">Weekends</option>
+        <option value="Both">Both</option>
+        <option value="Occasional">Occasional / On-call</option>
+      </select>
+
+      <label for="vreason">Why do you want to volunteer with AYARHEP?</label>
+      <textarea id="vreason" name="motivation" rows="4" required></textarea>
+
+      <label for="vskills">Relevant skills or experience (optional)</label>
+      <textarea id="vskills" name="skills" rows="3"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+
+
+  </main>
+    <footer>
         <div class="footer-wrapper section-bg2" data-background="">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
@@ -350,10 +334,10 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
+                                            <p>Komarock</p>
                                         </li>
-                                        <li><a href="#">Phone : +254 722390634</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="#">Phone : +25722390634</a></li>
+                                        <li><a href="#">Email :</a></li>
                                     </ul>
                                 </div>
 
@@ -378,7 +362,7 @@
                                 <div class="footer-tittle">
                                     <h4>Newsletter</h4>
                                     <div class="footer-pera footer-pera2">
-                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                                    <p>...............</p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form" >
@@ -422,12 +406,16 @@
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                              
+                                <div class="footer-copy-right">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="ht.com" target="_blank"></a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
                             </div>
                             <div class="col-xl-2 col-lg-3">
                                 <div class="footer-social f-right">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a  href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fas fa-globe"></i></a>
                                     <a href="#"><i class="fab fa-behance"></i></a>
                                 </div>
@@ -438,49 +426,55 @@
             </div>
         </div>
     </footer>
+
     <!-- Scroll Up -->
     <div id="back-top" >
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
-      <!-- JS here -->
 
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-      <!-- Jquery, Popper, Bootstrap -->
-      <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
-      <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <!-- JS here -->
 
-      <!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
-      <!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
-      <script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-      <!-- Date Picker -->
-      <script src="./assets/js/gijgo.min.js"></script>
-      <!-- Nice-select, sticky -->
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-      <script src="./assets/js/jquery.sticky.js"></script>
-      
-      <!-- counter , waypoint,Hover Direction -->
-      <script src="./assets/js/jquery.counterup.min.js"></script>
-      <script src="./assets/js/waypoints.min.js"></script>
-      <script src="./assets/js/jquery.countdown.min.js"></script>
-      <script src="./assets/js/hover-direction-snake.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-      <!-- contact js -->
-      <!-- <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-       -->
-      <!-- Jquery Plugins, main Jquery -->	
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="./assets/js/jquery.barfiller.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    contact js
+    <!-- <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script> -->
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <!-- <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script> -->
+  
+
 </body>
 </html>
